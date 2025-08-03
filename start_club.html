@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start a Club - BookClub Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">BookClub Hub</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="start_club.html" class="active">Start a Club</a></li>
+                <li><a href="join_club.html">Join Clubs</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="form-container">
+                <h1>Start Your Book Club</h1>
+                <form id="startClubForm" class="club-form">
+                    <div class="form-group">
+                        <label for="clubName">Club Name *</label>
+                        <input type="text" id="clubName" name="clubName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description *</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="purpose">Purpose</label>
+                        <textarea id="purpose" name="purpose" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genre">Genre</label>
+                        <select id="genre" name="genre">
+                            <option value="">Select a genre</option>
+                            <option value="fiction">Fiction</option>
+                            <option value="non-fiction">Non-Fiction</option>
+                            <option value="mystery">Mystery</option>
+                            <option value="romance">Romance</option>
+                            <option value="sci-fi">Science Fiction</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="biography">Biography</option>
+                            <option value="history">History</option>
+                            <option value="self-help">Self Help</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="coverImage">Cover Image</label>
+                        <input type="file" id="coverImage" name="coverImage" accept="image/*">
+                        <div id="imagePreview" class="image-preview"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Create Club</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>
